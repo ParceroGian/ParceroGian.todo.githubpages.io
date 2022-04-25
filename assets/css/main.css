@@ -1,42 +1,52 @@
-/*Organizando o arquivo CSS*/
-/*Limpando o navegador. CSS Reset*/
+/* comentário: Linha de código que será ignorado */
+
+/* Organizando o arquivo CSS */
+
+/* Limpando o navegador. CSS Reset */
+
+/* 
+inherit - Herança explícita.
+initial - Força a redefinição de valores.
+unset - desabilita uma propriedade CSS.
+ */
 
 
 
-body, h1, h2, h3, h4, h5, h6{
+ body, h1, h2, h3, h4, h5, h6{
     margin: 0;
     padding: 0;
     outline: 0;
 }
-
-*{ box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
-/* body > div{
+
+
+/* Responsive Web Design */
+
+/* Mobile */
+ /* body > div {
     width: 300px;
     height: 300px;
     margin: 5% auto;
     border: solid 10px red;
     padding: 50px 20px;
-} */
+}  */
 
-/*responsive web disign*/
-
-
-body{
+body {
     background-color: #333;
     color: #e4e4e4;
 }
 
-/*Quando a largura minima for de 768px aplique CSS*/
+/* Quando a largura mínima for de 768px aplique este CSS */
 @media (min-width: 768px){
-    /* especificidade CSS. Quanto mais especifico o seletor, mais importe*/
-    html body{
-    background-color : rgb(255, 81, 0);
-    color: initial;
-}
-body {
-    background: red;
-}
+    /* especificidade CSS. Quanto mais específico o seletor, mais importante. */
+    html body {
+        background-color: unset;
+        color: initial;
+    }
 
+    body {
+        background: red;
+    }
 }
-
