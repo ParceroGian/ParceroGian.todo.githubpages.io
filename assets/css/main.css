@@ -1,0 +1,42 @@
+/*Organizando o arquivo CSS*/
+/*Limpando o navegador. CSS Reset*/
+
+
+
+body, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+*{ box-sizing: border-box;
+}
+/* body > div{
+    width: 300px;
+    height: 300px;
+    margin: 5% auto;
+    border: solid 10px red;
+    padding: 50px 20px;
+} */
+
+/*responsive web disign*/
+
+
+body{
+    background-color: #333;
+    color: #e4e4e4;
+}
+
+/*Quando a largura minima for de 768px aplique CSS*/
+@media (min-width: 768px){
+    /* especificidade CSS. Quanto mais especifico o seletor, mais importe*/
+    html body{
+    background-color : rgb(255, 81, 0);
+    color: initial;
+}
+body {
+    background: red;
+}
+
+}
+
