@@ -1,7 +1,7 @@
 :root {
     --menuWidth: 200px;
     --detailsWidth: 300px;
-    --boder: solid 10px;
+    --boder: solid 1px;
 }
 html {
     box-sizing: border-box;
