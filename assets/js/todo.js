@@ -1,40 +1,80 @@
-console.log("Vai Corinthians!");
 
-// const - constante - nao muda. a nao ser objetos e referencia, ai o seu conteudo pode mudar
+//   // exemplo de array
+//   const frutas = ["maçã", "banana", "abacaxi", "abacate"];
+  
+//   // frutas[3];
+//   // frutas.length;
+//   // frutas[frutas.length - 1];
+  
+//   console.log(frutas.at(-1));
+  
+//   //TypeScript
+//   //Criando um objeto literal
+//   //JavaScript Object Notation - JSON
 
-const nome ="Rafael Giandoso";
+//   const dados = {
+//     nome: "Glaucio Daniel",
+//     idade: 36,
+//     programador: true,
+//     acao: () => {
+//       console.log("Executando uma ação");
+//     },
+//   };
+  
+//   //Objeto é um conjuto de atributos(propriedades ou valores) e métodos(ações ou funçõs)
+//   console.log(dados.nome);
+//   console.log("Idade: ", dados.idade);
+  
+//   dados.acao();
 
-//let - variavel - pode mudar a quaquer momento.
+  const db= 
+  [
+    { 
+      id: 1, 
+      title: "Concluir App Conexão Arte",
+      steps: [
+        { step: "Ajustar textos" },
+        { step: "Trocar imagens para imagens públicas" },
+        { step: "Publicar no Expo" },
+        { step: "Publicar no Expo Store Connect" },
+      ],
+      done: false,
+      dueDate: "2022-05-06",
+      reminder: "2022-05-02 10:00",
+    },
 
-let email = "faelgiandoso@gmail.com";
-
-
-console.log(`Nome: ${nome} Email: ${email}`);
-
-let a = 10;
-let b = 0
-
-if (a > b)
     {
-        console.log(a+b);
-    }
+        id: 2,
+        title: "CAula 4 Fiap - Avanade",
+        steps: [{ step: "Atributos Globais" }, { step: "Estrutura CSS" }],
+        done: true,
+        dueDate: "2022-05-06",
+    },
 
-    function escreve(x){
-        console.log(" Frase: " + x);
-    }
+  ];
+  console.log(db[0].title)
 
-    escreve(`Seja bem_vindo ${nome}`);
-    escreve("treinamento HTML%,CSS3 e JS");
+  const newTask = document.querySelector("#inputTxtNewTask");
 
-//##########################################################
+  const form = document.querySelector('#addNewTask');
 
-// objeto.metodo()
-// objeto.propriedade = valor;
+  form.addEventListener('submit', (e)=>
+  {
+      e.preventDefault();
+  });
 
-// document é um objeto.
+  newTask.addEventListener('keyup',(e)=>
+  {
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.key == 'Enter')
+      {
+          alert(newTask.value);
 
-// window é um objetp.
+          db.push({id: Number(db.length) +1, title: newTask.value});
 
-// qual propriedade, ou propriedade desse obejto.
-
-// window.innerheight window.innerwidth
+          newTask.value = '';
+          console.log(db);
+      }
+  });
+  
