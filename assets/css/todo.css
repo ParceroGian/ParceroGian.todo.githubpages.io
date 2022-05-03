@@ -152,20 +152,26 @@ header.menu__header__profile > div{
 
 
 .task {
-    width: 90%;
-    margin: 2% 5%;
+    width: 100%;
+    margin: 0.2% 5%;
     height: 60px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     background-color: rgba(240,240,240,0.8);
     border-radius: 5px;
+
+    
 }
 .task:hover{
     background:rgb(240,240,240);
     cursor: pointer;
 }
-
+.tasks{
+    flex-direction: column;
+    padding-right: 10%;
+    
+}
  /* tablet  chama breakpoint */
 @media(min-width:768px){
     .container{
