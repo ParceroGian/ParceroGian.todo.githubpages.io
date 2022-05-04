@@ -1,0 +1,105 @@
+@keyframes fadeUp{
+    from{
+        transform: translateY(px) scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(100px) scale(1);
+        opacity: 1;
+    }
+}
+
+
+.box {
+    transform: translateY(100px);
+    animation: fadeUp 1s;
+    animation-iteration-count: infinite;
+
+    width: 50%;
+    height: 50vh;
+    margin: 10% auto;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid red;
+}
+/*unidades de medida CSS - px é sempre fixa. em pixels
+o .box - colocamos uma medida fixa nela para o tamanho da fonte.
+em - é uma medida relativa em relação ao tamanho definido no elemento pai. s siginifica a largura da letra M noo tamanho definido no pai.
+em- equivale a largura da letra no tamanho definido no pai.
+M em 40px equivale a 1 em  mara os elemtos filhos e descendentes;
+o padrao é 16px;
+
+rem relativo em relação ao root
+
+% porcentagem é relativo em relação ao pai
+*/
+html{
+    font-size: 40px;
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+    background: #eee;
+    margin: 1%;
+    font-size: 2rem;
+    font-family: 'roboto','lato', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 3s;
+}
+
+/* .item:hover{
+        transform: rotate(360deg);
+        transition-duration: 2s; 
+        border-radius: 50%;
+        transform: scale(2);
+} */
+
+.box:hover .item{
+    transform: translateX(200px) scale(2) rotate(360deg) ;
+    border-radius: 50%
+}
+
+.picture {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    border: solid 1px red;
+    overflow: hidden;
+    margin-bottom: 10%;
+    position: relative;
+}
+
+.picture > figure > img {
+    width: 100%;
+    transition-duration: 1.5s;
+}
+
+.picture:hover img{
+    transform: scale(2);
+}
+
+.picture > figure > figcaption {
+    width:100%;
+    background: #333;
+    color: #fff;
+    position: absolute;
+    bottom: -100px;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+.picture > figure {
+    height:300px;
+    position: relative;
+
+}
+
+.picture:hover > figure >figcaption{
+    bottom: 0;
+}
