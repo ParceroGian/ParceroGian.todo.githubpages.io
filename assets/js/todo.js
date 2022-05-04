@@ -90,6 +90,7 @@ newTask.addEventListener('keyup', (e) =>
       const date = new Date();
       const today = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
+        
       // db.push([])
       //   ({
       //     id: Number(db.length) + 1,
